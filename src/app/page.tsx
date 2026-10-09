@@ -246,6 +246,17 @@ export default function Home() {
                 >
                   See what I can do
                 </a>
+                <a
+                  href="/downloads/Faris-Hussain-Client-Pitch-Deck.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-sky-300 transition duration-300 hover:-translate-y-0.5 hover:text-sky-200"
+                >
+                  <svg aria-hidden="true" viewBox="0 0 256 512" className="h-3.5 w-3.5 fill-current">
+                    <path d="M168 345.941V44c0-6.627-5.373-12-12-12h-56c-6.627 0-12 5.373-12 12v301.941H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.569 9.373 33.941 0l86.059-86.059c15.119-15.119 4.411-40.971-16.971-40.971H168z" />
+                  </svg>
+                  Download pitch deck
+                </a>
               </div>
             </div>
 
@@ -500,6 +511,17 @@ export default function Home() {
                 className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-neutral-100 transition duration-300 hover:-translate-y-0.5 hover:border-white/40"
               >
                 GitHub
+              </a>
+              <a
+                href="/downloads/Faris-Hussain-Client-Pitch-Deck.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-neutral-100 transition duration-300 hover:-translate-y-0.5 hover:border-white/40"
+              >
+                <svg aria-hidden="true" viewBox="0 0 256 512" className="h-3.5 w-3.5 fill-current">
+                  <path d="M168 345.941V44c0-6.627-5.373-12-12-12h-56c-6.627 0-12 5.373-12 12v301.941H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.569 9.373 33.941 0l86.059-86.059c15.119-15.119 4.411-40.971-16.971-40.971H168z" />
+                </svg>
+                Download pitch deck
               </a>
             </div>
             <p className="mt-6 text-sm text-neutral-500">
