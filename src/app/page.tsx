@@ -121,6 +121,14 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
+    title: "Agentic AI for an Energy Trading Marketplace",
+    stack: "Google ADK · Amazon Bedrock · AWS Glue/S3/Lambda · Airflow · Terraform",
+    description:
+      "Designed autonomous, goal-oriented trading agents for RFQ negotiation, backed by a real-time data pipeline and infrastructure as code.",
+    impact: "Thesis research found economic equivalence between LLM-driven and rule-based agents, informing production architecture.",
+    caseStudySlug: "agentic-ai-energy-trading",
+  },
+  {
     title: "Data Platform Modernisation — Energy Commodities Trading",
     stack: "AWS · Redshift · Lambda · Glue · Medallion Architecture · Airflow · Python",
     description:
@@ -133,6 +141,7 @@ const PROJECTS = [
     description:
       "Migrated legacy insurance policy data from Mainframe/DB2 to Snowflake and designed Data Vault 2.0 architecture for SAP finance systems, decommissioning SAP BODI.",
     impact: "Retired a legacy mainframe/SAP BODI dependency across multiple enterprise source systems.",
+    caseStudySlug: "data-vault-insurance-finance",
   },
   {
     title: "Data Warehouse Builder — Product Development",
@@ -345,17 +354,24 @@ export default function Home() {
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Key Projects</h2>
               <Link
                 href="/case-studies"
-                className="hidden text-sm font-medium text-sky-400 transition hover:text-sky-300 sm:inline-block"
+                className="text-sm font-medium text-sky-400 transition hover:text-sky-300"
               >
                 Read full case studies →
               </Link>
             </div>
           </Reveal>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
-            {PROJECTS.map((project, index) => (
-              <Reveal key={project.title} delay={index * 80}>
-                <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-500/40 hover:shadow-lg hover:shadow-sky-500/10">
-                  <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+            {PROJECTS.map((project, index) => {
+              const cardContent = (
+                <>
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+                    {project.caseStudySlug && (
+                      <span className="mt-1 flex-shrink-0 rounded-full border border-sky-400/30 bg-sky-400/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-sky-400">
+                        Case study
+                      </span>
+                    )}
+                  </div>
                   <p className="mt-1 text-xs font-medium uppercase tracking-wide text-sky-400">
                     {project.stack}
                   </p>
@@ -365,9 +381,29 @@ export default function Home() {
                   <p className="mt-3 text-sm font-medium text-emerald-400">
                     Impact: {project.impact}
                   </p>
-                </div>
-              </Reveal>
-            ))}
+                  {project.caseStudySlug && (
+                    <p className="mt-4 text-sm font-medium text-sky-400">Read full case study →</p>
+                  )}
+                </>
+              );
+
+              return (
+                <Reveal key={project.title} delay={index * 80}>
+                  {project.caseStudySlug ? (
+                    <Link
+                      href={`/case-studies#${project.caseStudySlug}`}
+                      className="block h-full rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-500/40 hover:shadow-lg hover:shadow-sky-500/10"
+                    >
+                      {cardContent}
+                    </Link>
+                  ) : (
+                    <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-500/40 hover:shadow-lg hover:shadow-sky-500/10">
+                      {cardContent}
+                    </div>
+                  )}
+                </Reveal>
+              );
+            })}
           </div>
         </section>
 

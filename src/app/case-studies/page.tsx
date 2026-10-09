@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 const CASE_STUDIES = [
   {
+    slug: "agentic-ai-energy-trading",
     title: "Agentic AI for an Energy Trading Marketplace",
     company: "Enmacc GmbH",
     period: "Feb 2025 – Present",
@@ -28,6 +29,7 @@ const CASE_STUDIES = [
       "The research found economic equivalence between LLM-driven and rule-based agents, with distinct tradeoffs in decision quality — directly informing how agentic components are being designed into the trading marketplace's architecture.",
   },
   {
+    slug: "data-vault-insurance-finance",
     title: "Data Vault 2.0 Modernisation for Insurance & Finance",
     company: "Royal Cyber Inc.",
     period: "Mar 2023 – Nov 2024",
@@ -72,7 +74,10 @@ export default function CaseStudiesPage() {
           <div className="space-y-10">
             {CASE_STUDIES.map((study, index) => (
               <Reveal key={study.title} delay={index * 100}>
-                <article className="rounded-2xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:border-sky-500/30">
+                <article
+                  id={study.slug}
+                  className="scroll-mt-24 rounded-2xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:border-sky-500/30"
+                >
                   <p className="text-xs font-medium uppercase tracking-widest text-sky-400">
                     {study.company} · {study.period}
                   </p>
