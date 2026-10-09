@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Faris Hussain — Client Pitch Deck</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #111113; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #f5f5f5;
+  }
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: #111113;
+    break-after: page;
+    padding: 90px 110px;
+    display: flex;
+    flex-direction: column;
+  }
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .blob-sky { background: #38bdf8; }
+  .blob-purple { background: #c084fc; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #93d9fc;
+    background: rgba(56,189,248,0.14);
+    border: 1px solid rgba(56,189,248,0.4);
+    border-radius: 999px;
+    padding: 9px 20px;
+    width: fit-content;
+    margin-bottom: 28px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #38bdf8;
+  }
+  .heading {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    max-width: 1500px;
+    margin-bottom: 26px;
+  }
+  .heading .accent { color: #c084fc; }
+  .lead {
+    font-size: 24px;
+    line-height: 1.55;
+    color: #d4d4d8;
+    font-weight: 500;
+    max-width: 1300px;
+    margin-bottom: 20px;
+  }
+
+  .bullets { list-style: none; margin-top: 10px; }
+  .bullets li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #e4e4e7;
+    font-weight: 500;
+    margin-bottom: 16px;
+    max-width: 1300px;
+  }
+  .bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background: #a5b4fc;
+  }
+
+  .card-grid {
+    display: grid;
+    gap: 26px;
+    margin-top: 16px;
+  }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .card {
+    background: rgba(255,255,255,0.055);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 16px;
+    padding: 28px 26px;
+  }
+  .card h4 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  .card p {
+    font-size: 17px;
+    line-height: 1.55;
+    color: #cfcfd2;
+    font-weight: 500;
+  }
+  .step-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(56,189,248,0.22);
+    border: 1px solid rgba(56,189,248,0.5);
+    color: #bae6fd;
+    font-weight: 800;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  /* Plain quote-line style (left accent border, no box) */
+  .tagline {
+    border-left: 3px solid #38bdf8;
+    padding-left: 22px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #e4e4e7;
+    font-weight: 600;
+    max-width: 1500px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .tagline strong { color: #93d9fc; font-weight: 700; }
+  /* Boxed callout — used where a bordered card look is wanted */
+  .callout {
+    background: rgba(56,189,248,0.1);
+    border: 1px solid rgba(56,189,248,0.35);
+    border-radius: 14px;
+    padding: 22px 28px;
+    font-size: 19px;
+    line-height: 1.5;
+    color: #e5e7eb;
+    font-weight: 500;
+    max-width: 1500px;
+  }
+  .callout strong { color: #93d9fc; font-weight: 700; }
+  .note {
+    font-size: 15px;
+    color: #a1a1aa;
+    margin-top: 12px;
+    font-style: italic;
+  }
+
+  .spacer { flex: 1; }
+
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+    margin-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 15px;
+  }
+  .footer-row .name { color: #f5f5f5; font-weight: 700; }
+  .footer-row .url { color: #93d9fc; font-weight: 600; }
+  .page-num {
+    position: absolute;
+    top: 48px;
+    right: 56px;
+    font-size: 15px;
+    color: #8a8a8f;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* --- Cover slide --- */
+  .cover { justify-content: center; }
+  .cover .eyebrow { margin-bottom: 40px; }
+  .cover h1 {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    max-width: 1400px;
+  }
+  .cover h1 .accent { color: #c084fc; }
+  .cover .sub {
+    font-size: 24px;
+    color: #d4d4d8;
+    font-weight: 500;
+    margin-top: 28px;
+    max-width: 1100px;
+    line-height: 1.5;
+  }
+  .cover-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 60px;
+  }
+  .cover-footer .who { font-size: 19px; color: #f5f5f5; font-weight: 700; }
+  .cover-footer .role { font-size: 16px; color: #a3a3a3; font-weight: 500; margin-top: 4px; }
+  .cover-footer .brand { text-align: right; }
+  .cover-footer .brand .name { font-size: 19px; color: #f5f5f5; font-weight: 700; }
+  .cover-footer .brand .url { font-size: 16px; color: #93d9fc; font-weight: 600; margin-top: 4px; }
+
+  /* --- About slide --- */
+  .about-grid { display: flex; gap: 60px; align-items: center; margin-top: 10px; }
+  .portrait-wrap {
+    width: 300px;
+    height: 360px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.15);
+    flex-shrink: 0;
+  }
+  .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* --- Case study / research slides --- */
+  .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 20px; }
+  .case-grid .label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #93d9fc;
+    margin-bottom: 10px;
+  }
+  .case-grid p {
+    font-size: 18px;
+    line-height: 1.55;
+    color: #e4e4e7;
+    font-weight: 500;
+  }
+
+  .closing-links { display: flex; gap: 26px; margin-top: 18px; }
+  .closing-links a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #93d9fc;
+  }
+</style>
+</head>
+<body>
+
+<!-- 1. COVER -->
+<section class="slide cover">
+  <div class="blob blob-sky" style="width:600px;height:600px;top:-200px;right:-150px;"></div>
+  <div class="blob blob-purple" style="width:500px;height:500px;bottom:-200px;left:-100px;"></div>
+  <div class="eyebrow">CLIENT PITCH DECK</div>
+  <h1>Reliable data foundations.<br>Practical <span class="accent">AI systems.</span></h1>
+  <p class="sub">I help businesses modernise their data platforms, build reliable pipelines, and develop AI systems connected to real business workflows.</p>
+  <div class="spacer"></div>
+  <div class="cover-footer">
+    <div>
+      <div class="who">Faris Hussain</div>
+      <div class="role">Data &amp; AI Platform Engineer · Munich, Germany</div>
+    </div>
+    <div class="brand">
+      <div class="name">Faris Hussain</div>
+      <div class="url">faris-hussain-site.vercel.app</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROBLEM -->
+<section class="slide">
+  <div class="page-num">02 / 15</div>
+  <div class="eyebrow">THE PROBLEM</div>
+  <div class="heading">Your AI ambitions depend on your data foundations.</div>
+  <p class="lead">Business-critical data is often spread across disconnected systems, fragile pipelines, and legacy platforms.</p>
+  <p class="lead">Teams spend time reconciling numbers instead of using them. AI prototypes add another layer of complexity when the underlying data is difficult to access or trust.</p>
+  <div class="spacer"></div>
+  <div class="tagline">The challenge is not adding more tools. It is making the system work together.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 3. APPROACH -->
+<section class="slide">
+  <div class="page-num">03 / 15</div>
+  <div class="eyebrow">THE APPROACH</div>
+  <div class="heading">Connect the foundation to the business outcome.</div>
+  <div class="card-grid grid-3">
+    <div class="card"><div class="step-num">1</div><h4>Build the foundation</h4><p>Bring operational data into a consistent, usable platform.</p></div>
+    <div class="card"><div class="step-num">2</div><h4>Make it dependable</h4><p>Establish orchestration, quality checks, clear access, and operational ownership.</p></div>
+    <div class="card"><div class="step-num">3</div><h4>Put it to work</h4><p>Enable analytics, business integrations, and carefully evaluated AI applications.</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="tagline">One connected approach — from source systems to the people and applications that use the data.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 4. ABOUT ME -->
+<section class="slide">
+  <div class="page-num">04 / 15</div>
+  <div class="eyebrow">ABOUT ME</div>
+  <div class="heading">Architecture thinking. Hands-on engineering.</div>
+  <div class="about-grid">
+    <div class="portrait-wrap"><img src="portrait.jpg" alt="Faris Hussain" /></div>
+    <div>
+      <p class="lead">I'm Faris Hussain, a Munich-based Data &amp; AI Platform Engineer with experience across energy trading, insurance, finance, and data-platform product development.</p>
+      <p class="lead">My work spans enterprise warehouse modelling, cloud ingestion, workflow orchestration, access governance, and multi-agent AI research.</p>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="tagline">I connect architecture decisions with implementation — and explain the trade-offs to technical and business stakeholders.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 5. SERVICES -->
+<section class="slide">
+  <div class="page-num">05 / 15</div>
+  <div class="eyebrow">SERVICES</div>
+  <div class="heading">Three ways I can help.</div>
+  <div class="card-grid grid-3">
+    <div class="card"><h4>Data platform modernisation</h4><p>Assess existing architecture, design the target platform, and plan migrations around business priorities.</p></div>
+    <div class="card"><h4>Reliable data engineering</h4><p>Build and improve ingestion, transformations, orchestration, and governed data delivery.</p></div>
+    <div class="card"><h4>AI systems &amp; evaluation</h4><p>Develop domain-specific agents and integrations, then evaluate their behaviour against clear baselines.</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="tagline">Each engagement starts with a defined problem and agreed acceptance criteria.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 6. OFFERING 01 -->
+<section class="slide">
+  <div class="page-num">06 / 15</div>
+  <div class="eyebrow">OFFERING · 01</div>
+  <div class="heading">Modernise without losing sight of what already works.</div>
+  <p class="lead">A migration should solve a business problem — not simply replace one technology with another. I can help with:</p>
+  <ul class="bullets">
+    <li>Current-state architecture assessments and dependency mapping.</li>
+    <li>Warehouse and lakehouse design, including Data Vault 2.0.</li>
+    <li>Multi-source integration and legacy-to-cloud migration planning.</li>
+    <li>Phased implementation with reconciliation and explicit cutover criteria.</li>
+  </ul>
+  <div class="spacer"></div>
+  <div class="callout"><strong>Typical deliverables:</strong> architecture diagrams, decision records, a migration roadmap, and scoped implementation.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 7. OFFERING 02 -->
+<section class="slide">
+  <div class="page-num">07 / 15</div>
+  <div class="eyebrow">OFFERING · 02</div>
+  <div class="heading">Build pipelines that teams can depend on.</div>
+  <p class="lead">Getting data into storage is only the beginning. Reliable delivery also needs incremental processing, stable schemas, sensible retries, useful alerts, and a clear recovery path.</p>
+  <p class="lead">My work connects APIs and operational systems with cloud storage, catalogues, analytical engines, and downstream consumers.</p>
+  <div class="spacer"></div>
+  <div class="callout"><strong>Typical deliverables:</strong> working pipelines, orchestration, validation checks, infrastructure as code, and operational handover.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 8. OFFERING 03 -->
+<section class="slide">
+  <div class="page-num">08 / 15</div>
+  <div class="eyebrow">OFFERING · 03</div>
+  <div class="heading">Evaluate AI before expanding its responsibility.</div>
+  <p class="lead">The right question is not simply: "Can we build an agent?" It is: "Where does an agent help, and how will we know?"</p>
+  <p class="lead">My approach starts with a bounded workflow, explicit tool access, and measurable evaluation. Where appropriate, I compare AI-driven behaviour with simpler rule-based alternatives.</p>
+  <div class="spacer"></div>
+  <div class="callout"><strong>Typical deliverables:</strong> a scoped prototype, system integrations, an evaluation framework, and recommendations grounded in observed behaviour.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 9. CASE STUDY 1 -->
+<section class="slide">
+  <div class="page-num">09 / 15</div>
+  <div class="eyebrow">SELECTED DELIVERY</div>
+  <div class="heading">Finance data ready for analytics.</div>
+  <div class="case-grid">
+    <div><div class="label">CONTEXT</div><p>A business needed finance and CRM data available in its cloud analytics environment to support reporting and planning.</p></div>
+    <div><div class="label">MY CONTRIBUTION</div><p>Built and productionised an API-to-cloud ingestion pipeline, implemented incremental processing, and validated required source datasets and query access.</p></div>
+    <div><div class="label">DELIVERED</div><p>Scheduled finance ingestion and queryable finance/CRM datasets, with stakeholder confirmation that the required queries were usable.</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="tagline">Completed ingestion scope; downstream planning-platform integration is a separate, ongoing phase.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 10. CASE STUDY 2 -->
+<section class="slide">
+  <div class="page-num">10 / 15</div>
+  <div class="eyebrow">SELECTED DELIVERY</div>
+  <div class="heading">Architecture clarity for due diligence.</div>
+  <div class="case-grid">
+    <div><div class="label">CONTEXT</div><p>Stakeholders needed a dependable explanation of the existing data platform — and a clear distinction between current capabilities and future plans.</p></div>
+    <div><div class="label">MY CONTRIBUTION</div><p>Led an assessment reconciling repository documentation with read-only cloud discovery. Mapped the current architecture, identified gaps, and prepared traceable stakeholder-facing slides.</p></div>
+    <div><div class="label">DELIVERED</div><p>A reviewed architecture baseline and current-to-target comparison, with assumptions and unknowns explicitly identified.</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="tagline">Clear evidence makes architecture decisions easier to discuss and defend.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 11. RESEARCH -->
+<section class="slide">
+  <div class="page-num">11 / 15</div>
+  <div class="eyebrow">SELECTED RESEARCH</div>
+  <div class="heading">Multi-agent energy trading.</div>
+  <div class="case-grid">
+    <div><div class="label">RESEARCH QUESTION</div><p>How do LLM-driven agents compare with rule-based alternatives in simulated energy-trading workflows?</p></div>
+    <div><div class="label">MY CONTRIBUTION</div><p>Built energy-specific buyer and seller agents, data-to-simulation transformations, negotiation workflows, and experiment analytics.</p></div>
+    <div><div class="label">EVALUATION SCOPE</div><p>Compared behaviour across baseline and stress scenarios, examining negotiation outcomes, economic measures, and model telemetry.</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="tagline"><strong>What this demonstrates:</strong> the ability to connect domain modelling, agent implementation, and systematic evaluation.</div>
+  <div class="note">Research simulation — not a claim of live autonomous trading or commercial returns.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 12. BEYOND THE DEMO -->
+<section class="slide">
+  <div class="page-num">12 / 15</div>
+  <div class="eyebrow">BEYOND THE DEMO</div>
+  <div class="heading">Engineering beyond the happy path.</div>
+  <p class="lead">My wider experience includes:</p>
+  <div class="card-grid grid-3">
+    <div class="card"><h4>Platform operations</h4><p>Improving ingestion continuity, Airflow logging, notifications, and failure visibility.</p></div>
+    <div class="card"><h4>Governed access</h4><p>Contributing to data classification, managed access, and infrastructure-as-code adoption.</p></div>
+    <div class="card"><h4>Reusable data products</h4><p>Contributing to metadata-driven warehouse tooling and API integration features.</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="tagline">The goal is not just a working demonstration. It is a system another team can understand, use, and maintain.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 13. PROCESS -->
+<section class="slide">
+  <div class="page-num">13 / 15</div>
+  <div class="eyebrow">HOW WE'D WORK</div>
+  <div class="heading">A clear process, with visible checkpoints.</div>
+  <div class="card-grid grid-4">
+    <div class="card"><div class="step-num">1</div><h4>Discover</h4><p>Understand the business problem, existing systems, constraints, and stakeholders.</p></div>
+    <div class="card"><div class="step-num">2</div><h4>Define</h4><p>Agree the scope, deliverables, architecture, and acceptance criteria.</p></div>
+    <div class="card"><div class="step-num">3</div><h4>Build</h4><p>Implement in reviewable increments, making dependencies and trade-offs visible.</p></div>
+    <div class="card"><div class="step-num">4</div><h4>Validate &amp; hand over</h4><p>Check the agreed behaviour, document limitations, and establish operational ownership.</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="tagline">Progress is measured against accepted deliverables — not just activity.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 14. ENGAGEMENT OPTIONS -->
+<section class="slide">
+  <div class="page-num">14 / 15</div>
+  <div class="eyebrow">ENGAGEMENT OPTIONS</div>
+  <div class="heading">Start with the engagement your project needs.</div>
+  <div class="card-grid grid-3">
+    <div class="card"><h4>Architecture assessment</h4><p>For teams that need clarity before committing to a migration or platform investment.</p></div>
+    <div class="card"><h4>Scoped implementation</h4><p>For teams with a defined pipeline, integration, modernisation, or AI evaluation need.</p></div>
+    <div class="card"><h4>Technical advisory</h4><p>For teams that need support with architecture decisions, implementation reviews, or delivery planning.</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="tagline">Scope, timeline, availability, and fees are agreed after an initial discussion.</div>
+  <div class="note">Proposed engagement options for this deck.</div>
+  <div class="footer-row"><span class="name">Faris Hussain</span><span class="url">faris-hussain-site.vercel.app</span></div>
+</section>
+
+<!-- 15. CLOSING -->
+<section class="slide">
+  <div class="blob blob-purple" style="width:500px;height:500px;top:-150px;right:-120px;"></div>
+  <div class="page-num">15 / 15</div>
+  <div class="eyebrow">NEXT STEP</div>
+  <div class="heading">Let's define the right next step.</div>
+  <ul class="bullets">
+    <li>Modernising a data platform?</li>
+    <li>Connecting fragmented business systems?</li>
+    <li>Evaluating where AI can genuinely help?</li>
+  </ul>
+  <p class="lead">Start with a conversation about the problem, the constraints, and what a useful outcome would look like.</p>
+  <div class="closing-links">
+    <a href="#">Connect on LinkedIn</a>
+    <a href="#">Explore public work on GitHub</a>
+  </div>
+  <div class="spacer"></div>
+  <div class="footer-row">
+    <div>
+      <div class="name">Faris Hussain</div>
+      <div style="color:#a3a3a3;font-weight:500;margin-top:4px;">Data &amp; AI Platform Engineer · Munich, Germany</div>
+    </div>
+    <span class="url">faris-hussain-site.vercel.app</span>
+  </div>
+</section>
+
+</body>
+</html>
