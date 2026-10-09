@@ -341,7 +341,15 @@ export default function Home() {
         {/* Projects */}
         <section id="projects" className="mx-auto max-w-5xl px-6 py-16">
           <Reveal>
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Key Projects</h2>
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Key Projects</h2>
+              <Link
+                href="/case-studies"
+                className="hidden text-sm font-medium text-sky-400 transition hover:text-sky-300 sm:inline-block"
+              >
+                Read full case studies →
+              </Link>
+            </div>
           </Reveal>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {PROJECTS.map((project, index) => (
