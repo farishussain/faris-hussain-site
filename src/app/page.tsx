@@ -40,11 +40,10 @@ const FAQS = [
   },
 ];
 
-const BADGES = [
-  "Platform Data Engineer @ Enmacc",
-  "M.Eng. AI of Autonomous Systems",
-  "Data Vault 2.0 Specialist",
-  "Munich, Germany",
+const HERO_STATS = [
+  { top: "Data Vault 2.0", bottom: "Specialist", position: "top-6 -left-6 sm:-left-10" },
+  { top: "M.Eng. AI", bottom: "Autonomous Systems", position: "bottom-24 -right-6 sm:-right-10" },
+  { top: "Munich", bottom: "Germany · Remote-friendly", position: "-bottom-6 left-8" },
 ];
 
 const SERVICES = [
@@ -194,7 +193,7 @@ export default function Home() {
 
       <main id="top">
         {/* Hero */}
-        <section className="relative mx-auto max-w-5xl overflow-hidden px-6 pt-20 pb-16 text-center">
+        <section className="relative mx-auto max-w-6xl overflow-hidden px-6 pt-20 pb-24">
           <div
             aria-hidden
             className="animate-blob absolute -top-24 -left-24 h-72 w-72 rounded-full bg-sky-500/20 blur-3xl"
@@ -208,52 +207,62 @@ export default function Home() {
             className="animate-blob animation-delay-4000 absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl"
           />
 
-          <div className="relative animate-[fade-in-up_0.8s_ease-out]">
-            <Image
-              src="/headshot.jpg"
-              alt="Faris Hussain"
-              width={96}
-              height={96}
-              priority
-              className="mx-auto mb-6 h-20 w-20 rounded-full object-cover shadow-lg shadow-sky-500/20 ring-2 ring-white/10"
-            />
-            <p className="text-sm font-medium uppercase tracking-widest text-sky-400">
-              Data &amp; AI Platform Engineer
-            </p>
-            <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-              Hi, this is Faris Hussain
-            </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-balance text-lg leading-relaxed text-neutral-300">
-              I design and build modern data platforms and agentic AI systems — from
-              Data Vault 2.0 warehouses for insurance and finance, to autonomous
-              trading agents running in production. Based in Munich, Germany, I help
-              companies modernise legacy data architecture and ship AI-driven
-              engineering that actually works.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              {BADGES.map((badge, index) => (
-                <span
-                  key={badge}
-                  style={{ animationDelay: `${0.4 + index * 0.1}s` }}
-                  className="animate-[fade-in-up_0.6s_ease-out_both] rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-neutral-200 transition hover:-translate-y-0.5 hover:border-sky-400/40"
+          <div className="relative grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+            {/* Left: copy */}
+            <div className="animate-[fade-in-up_0.8s_ease-out] text-center lg:text-left">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-sky-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                Platform Data Engineer @ Enmacc GmbH
+              </span>
+              <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
+                Hi, this is Faris Hussain
+              </h1>
+              <p className="mt-6 text-balance text-lg leading-relaxed text-neutral-300 lg:max-w-xl">
+                I design and build modern data platforms and agentic AI systems — from
+                Data Vault 2.0 warehouses for insurance and finance, to autonomous
+                trading agents running in production. Based in Munich, Germany, I help
+                companies modernise legacy data architecture and ship AI-driven
+                engineering that actually works.
+              </p>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+                <Link
+                  href="/contact"
+                  className="rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-sky-400 hover:shadow-lg hover:shadow-sky-500/30"
                 >
-                  {badge}
-                </span>
-              ))}
+                  Book a call
+                </Link>
+                <a
+                  href="#services"
+                  className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-neutral-100 transition duration-300 hover:-translate-y-0.5 hover:border-white/40"
+                >
+                  See what I can do
+                </a>
+              </div>
             </div>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="/contact"
-                className="rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-sky-400 hover:shadow-lg hover:shadow-sky-500/30"
-              >
-                Book a call
-              </Link>
-              <a
-                href="#services"
-                className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-neutral-100 transition duration-300 hover:-translate-y-0.5 hover:border-white/40"
-              >
-                See what I can do
-              </a>
+
+            {/* Right: photo card with floating badges */}
+            <div className="animate-[fade-in-up_1s_ease-out_0.2s_both] relative mx-auto aspect-square w-full max-w-md">
+              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-sky-500/30 via-purple-500/20 to-transparent blur-2xl" />
+              <div className="relative h-full w-full overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl shadow-black/40">
+                <Image
+                  src="/portrait.jpg"
+                  alt="Faris Hussain"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 420px, 80vw"
+                  className="object-cover"
+                />
+              </div>
+              {HERO_STATS.map((stat, index) => (
+                <div
+                  key={stat.top}
+                  style={{ animationDelay: `${0.6 + index * 0.15}s` }}
+                  className={`animate-[fade-in-up_0.6s_ease-out_both] absolute ${stat.position} rounded-2xl border border-white/10 bg-neutral-900/90 px-4 py-3 text-center shadow-xl shadow-black/30 backdrop-blur`}
+                >
+                  <p className="text-sm font-bold text-sky-400">{stat.top}</p>
+                  <p className="text-xs text-neutral-300">{stat.bottom}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

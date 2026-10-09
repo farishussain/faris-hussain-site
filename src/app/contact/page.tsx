@@ -62,7 +62,7 @@ export default function ContactPage() {
               <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
                 <div className="flex items-center gap-4">
                   <Image
-                    src="/headshot.jpg"
+                    src="/portrait.jpg"
                     alt="Faris Hussain"
                     width={56}
                     height={56}
