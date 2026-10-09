@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "../components/Reveal";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
@@ -60,9 +61,13 @@ export default function ContactPage() {
             <Reveal delay={100}>
               <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sky-400 to-purple-500 text-lg font-bold text-white">
-                    FH
-                  </div>
+                  <Image
+                    src="/headshot.jpg"
+                    alt="Faris Hussain"
+                    width={56}
+                    height={56}
+                    className="h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-white/10"
+                  />
                   <div>
                     <p className="font-semibold text-white">Faris Hussain</p>
                     <p className="text-sm text-neutral-400">Data &amp; AI Platform Engineer</p>

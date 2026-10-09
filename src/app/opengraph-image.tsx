@@ -1,9 +1,14 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function Image() {
+export default async function Image() {
+  const photoData = await readFile(join(process.cwd(), "public", "headshot.jpg"));
+  const photoSrc = `data:image/jpeg;base64,${photoData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -20,23 +25,18 @@ export default function Image() {
           fontFamily: "sans-serif",
         }}
       >
-        <div
+        <img
+          src={photoSrc}
+          alt="Faris Hussain"
+          width={140}
+          height={140}
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 140,
-            height: 140,
             borderRadius: 70,
-            background: "linear-gradient(135deg, #38bdf8, #a855f7)",
-            color: "white",
-            fontSize: 56,
-            fontWeight: 700,
+            objectFit: "cover",
             marginBottom: 36,
+            border: "3px solid rgba(255,255,255,0.2)",
           }}
-        >
-          FH
-        </div>
+        />
         <div style={{ display: "flex", fontSize: 60, fontWeight: 700, color: "white" }}>
           Faris Hussain
         </div>

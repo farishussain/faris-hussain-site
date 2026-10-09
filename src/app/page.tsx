@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "./components/Reveal";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
@@ -208,9 +209,14 @@ export default function Home() {
           />
 
           <div className="relative animate-[fade-in-up_0.8s_ease-out]">
-            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-sky-400 to-purple-500 text-2xl font-bold text-white shadow-lg shadow-sky-500/20">
-              FH
-            </div>
+            <Image
+              src="/headshot.jpg"
+              alt="Faris Hussain"
+              width={96}
+              height={96}
+              priority
+              className="mx-auto mb-6 h-20 w-20 rounded-full object-cover shadow-lg shadow-sky-500/20 ring-2 ring-white/10"
+            />
             <p className="text-sm font-medium uppercase tracking-widest text-sky-400">
               Data &amp; AI Platform Engineer
             </p>
