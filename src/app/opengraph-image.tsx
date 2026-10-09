@@ -52,7 +52,7 @@ export default async function Image() {
             }}
           >
             <div style={{ display: "flex", width: 10, height: 10, borderRadius: 999, background: "#34d399" }} />
-            Platform Data Engineer @ Enmacc GmbH
+            Data &amp; AI Platform Engineer
           </div>
           <div style={{ display: "flex", fontSize: 44, fontWeight: 700, color: "white", marginTop: 28, lineHeight: 1.15 }}>
             Hi, this is Faris Hussain

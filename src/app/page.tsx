@@ -212,7 +212,7 @@ export default function Home() {
             <div className="animate-[fade-in-up_0.8s_ease-out] text-center lg:text-left">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-sky-400">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                Platform Data Engineer @ Enmacc GmbH
+                Data &amp; AI Platform Engineer
               </span>
               <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
                 Hi, this is Faris Hussain
