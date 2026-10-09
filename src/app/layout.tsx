@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://faris-hussain-site.vercel.app"),
   title: "Faris Hussain — Data & AI Platform Engineer",
   description:
-    "Faris Hussain is a Data & AI Platform Engineer based in Munich, Germany, designing and building modern data platforms and agentic AI systems — from Data Vault 2.0 warehouses to autonomous AI agents in production.",
+    "Faris Hussain is a Data & AI Platform Engineer in Munich, building modern data platforms and agentic AI systems — from Data Vault 2.0 to production AI agents.",
   openGraph: {
     title: "Faris Hussain — Data & AI Platform Engineer",
     description:
-      "Designing and building modern data platforms and agentic AI systems — from Data Vault 2.0 warehouses to autonomous AI agents in production.",
+      "Data & AI Platform Engineer building modern data platforms and agentic AI systems in production.",
     url: "https://faris-hussain-site.vercel.app",
     siteName: "Faris Hussain",
     locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Faris Hussain — Data & AI Platform Engineer",
     description:
-      "Designing and building modern data platforms and agentic AI systems — from Data Vault 2.0 warehouses to autonomous AI agents in production.",
+      "Data & AI Platform Engineer building modern data platforms and agentic AI systems in production.",
   },
 };
 
