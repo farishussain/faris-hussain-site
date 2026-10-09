@@ -502,7 +502,9 @@ export default function Home() {
                 GitHub
               </a>
             </div>
-            <p className="mt-6 text-sm text-neutral-500">Munich, Germany · +49 162 8582393</p>
+            <p className="mt-6 text-sm text-neutral-500">
+              Munich, Germany · +49 162 8582393 · +92 334 3974364
+            </p>
           </Reveal>
         </section>
       </main>
