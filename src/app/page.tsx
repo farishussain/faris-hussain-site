@@ -5,7 +5,11 @@ import SiteFooter from "./components/SiteFooter";
 import FaqAccordion from "./components/FaqAccordion";
 
 
-const WORKED_WITH = ["Enmacc GmbH", "Royal Cyber Inc.", "Astera Software"];
+const WORKED_WITH = [
+  { name: "Enmacc GmbH", url: "https://enmacc.com" },
+  { name: "Royal Cyber Inc.", url: "https://www.royalcyber.com" },
+  { name: "Astera Software", url: "https://www.astera.com" },
+];
 
 const FAQS = [
   {
@@ -256,9 +260,15 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-neutral-400">
               {WORKED_WITH.map((company) => (
-                <span key={company} className="text-base font-semibold tracking-tight transition hover:text-white">
-                  {company}
-                </span>
+                <a
+                  key={company.name}
+                  href={company.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-base font-semibold tracking-tight transition hover:text-white"
+                >
+                  {company.name}
+                </a>
               ))}
             </div>
           </section>
