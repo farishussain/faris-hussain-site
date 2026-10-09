@@ -17,6 +17,11 @@ const INFO_CARDS = [
   { label: "Engagement", value: "Consulting & Advisory" },
 ];
 
+const PHONE_NUMBERS = [
+  { country: "Germany", number: "+49 162 8582393" },
+  { country: "Pakistan", number: "+92 334 3974364" },
+];
+
 const CALENDLY_URL = "https://calendly.com/farishussain021/30min";
 
 export default function ContactPage() {
@@ -82,6 +87,22 @@ export default function ContactPage() {
                     <div key={item.label} className="flex items-start justify-between gap-4 border-b border-white/5 pb-4 last:border-0 last:pb-0">
                       <dt className="text-sm text-neutral-400">{item.label}</dt>
                       <dd className="text-right text-sm font-medium text-white">{item.value}</dd>
+                    </div>
+                  ))}
+                  {PHONE_NUMBERS.map((phone) => (
+                    <div
+                      key={phone.country}
+                      className="flex items-start justify-between gap-4 border-b border-white/5 pb-4 last:border-0 last:pb-0"
+                    >
+                      <dt className="text-sm text-neutral-400">Phone ({phone.country})</dt>
+                      <dd className="text-right text-sm font-medium">
+                        <a
+                          href={`tel:${phone.number.replace(/\s+/g, "")}`}
+                          className="text-white transition hover:text-sky-300"
+                        >
+                          {phone.number}
+                        </a>
+                      </dd>
                     </div>
                   ))}
                   <div className="flex items-start justify-between gap-4 border-b border-white/5 pb-4 last:border-0 last:pb-0">
