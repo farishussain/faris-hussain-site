@@ -13,11 +13,14 @@ cp Faris-Hussain-Client-Pitch-Deck.pdf ../public/downloads/
 
 This folder is not part of the Next.js app (not under `src/` or imported anywhere) so it does not affect the site build.
 
-The included `portrait.jpg` preserves the portrait from the published deck.
+The included `portrait.jpg` preserves the About portrait from the published deck.
+The user-supplied `cover-portrait.png` is used only on the cover.
 Do not replace it with the website's differently cropped portraits.
 
 The cover has its own sizing rules. Slides 2–15 use larger type and cards,
 fixed spacing before supporting callouts, and bottom-aligned footers.
+The cover identity block sits above the footer. Its portrait uses a cover-only
+CSS crop; the About slide uses its separate, unchanged portrait.
 Text-heavy slides use `slide-text`; the about, connected process, and engagement
 comparison layouts have separate sizing rules. Check every page for clipping after layout changes,
 and keep the service descriptions at approximately three readable lines.
