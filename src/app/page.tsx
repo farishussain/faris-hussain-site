@@ -57,32 +57,32 @@ const SERVICES = [
   {
     title: "Data Platform Architecture & Modernisation",
     description:
-      "Design and implement modern, scalable data architectures — Medallion Architecture, cloud-native lakehouses, and legacy-to-cloud migrations for high-velocity, high-stakes environments.",
+      "Modernise legacy platforms and design dependable data foundations, from cloud migration planning to Medallion architectures that support analytics and AI workflows.",
   },
   {
-    title: "Data Vault 2.0 Design & Implementation",
+    title: "Data Warehousing & Modelling",
     description:
-      "End-to-end Data Vault 2.0 modelling and build-out for enterprise data warehouses, including Hub/Link/Satellite design, VaultSpeed automation, and multi-source integration.",
+      "Turn data from multiple sources into reusable, well-structured datasets using Data Vault 2.0, dimensional modelling and warehouse automation with tools such as VaultSpeed.",
   },
   {
-    title: "Agentic AI & LLM Systems",
+    title: "Platform Engineering & Governance",
     description:
-      "Design and build autonomous, goal-oriented AI agents using Google ADK, Amazon Bedrock, and multi-agent simulation — from research prototypes to production-ready systems.",
+      "Build repeatable cloud environments with Terraform and CloudFormation, governed data access, automated testing and CI/CD deployment workflows.",
   },
   {
-    title: "Cloud Data Engineering (AWS / Azure / GCP)",
+    title: "Data Pipelines & Orchestration",
     description:
-      "Build and operate ETL/ELT pipelines on AWS Glue, Lambda, S3, Azure Synapse, and Data Factory, with infrastructure as code via Terraform and CloudFormation.",
+      "Build reliable ingestion and transformation pipelines with AWS Glue, Talend or Kafka, using Airflow for scheduling and visibility into pipeline health.",
   },
   {
-    title: "ETL/ELT Pipeline & Orchestration",
+    title: "AI Integration & Evaluation",
     description:
-      "Design batch and streaming pipelines with Talend, Kafka, and Apache Airflow, with a focus on observability, reliability, and measurable data quality improvements.",
+      "Connect domain-specific agents to business workflows using Google ADK and Amazon Bedrock. Evaluate agent behaviour against clear baselines through controlled tests and simulations.",
   },
   {
-    title: "Analytics & BI Transformation",
+    title: "Analytics & Self-Service Data",
     description:
-      "Migrate legacy BI stacks to modern, AI-powered analytics platforms (e.g. Power BI / Tableau to ThoughtSpot) to reduce time-to-insight for business decision-making.",
+      "Make trusted data accessible for reporting and business decisions through well-modelled datasets and self-service analytics, including ThoughtSpot, Power BI and Tableau.",
   },
 ];
 
@@ -333,7 +333,7 @@ export default function Home() {
           <Reveal>
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Services</h2>
             <p className="mt-2 max-w-2xl text-neutral-400">
-              Practical, production-grade data and AI engineering — not just advice.
+              Practical engineering for dependable data foundations, reliable pipelines and AI-enabled workflows.
             </p>
           </Reveal>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
