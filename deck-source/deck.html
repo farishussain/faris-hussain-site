@@ -228,6 +228,10 @@
     border: 1px solid rgba(255,255,255,0.15);
   }
   .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .worked-with { margin-top: 16px; }
+  .worked-with h3 { font-size: 20px; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; color: #93d9fc; margin-bottom: 10px; }
+  .worked-with-list { display: flex; flex-wrap: wrap; gap: 8px 28px; list-style: none; font-size: 26px; line-height: 1.35; font-weight: 600; color: #d4d4d8; }
+  .slide-about .spacer { flex-basis: 24px; }
 
   /* Diagrams are conceptual summaries, not client architecture exports. */
   .diagram-caption {
@@ -413,7 +417,7 @@
 </section>
 
 <!-- 4. ABOUT ME -->
-<section class="slide">
+<section class="slide slide-about">
   <div class="page-num">04 / 15</div>
   <div class="eyebrow">ABOUT ME</div>
   <div class="about-grid">
@@ -427,6 +431,17 @@
         <li>Warehouse modelling, cloud ingestion, orchestration, access governance, and multi-agent AI research.</li>
       </ul>
     </div>
+  </div>
+  <div class="worked-with">
+    <h3>Worked with</h3>
+    <ul class="worked-with-list">
+      <li>Enmacc GmbH</li>
+      <li>Royal Cyber Inc.</li>
+      <li>Astera Software</li>
+      <li>Syssoft Solutions Inc.</li>
+      <li>HBA Basel-Landschaft</li>
+      <li>Brokrly Team</li>
+    </ul>
   </div>
   <div class="spacer"></div>
   <div class="tagline"><strong>Working style:</strong> hands-on implementation and clear trade-offs for technical and business stakeholders.</div>
