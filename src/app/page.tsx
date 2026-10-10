@@ -230,15 +230,21 @@ export default function Home() {
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 Data &amp; AI Platform Engineer
               </span>
-              <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
+              <p className="mt-6 text-base font-medium italic text-sky-300 sm:text-lg">
                 Hi, this is Faris Hussain
+              </p>
+              <h1 className="mt-4 text-balance text-4xl leading-[1.1] font-bold tracking-tight sm:text-5xl xl:text-6xl">
+                Modern{" "}
+                <span className="bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
+                  data &amp; ML platforms
+                </span>{" "}
+                for AI systems
               </h1>
               <p className="mt-6 text-balance text-lg leading-relaxed text-neutral-300 lg:max-w-xl">
-                I design and build modern data platforms and agentic AI systems — from
-                Data Vault 2.0 warehouses for insurance and finance, to autonomous
-                trading agents running in production. Based in Munich, Germany, I help
-                companies modernise legacy data architecture and ship AI-driven
-                engineering that actually works.
+                I help businesses bring their data together, build reliable pipelines,
+                and put AI to work in real business workflows. Based in Munich, I
+                combine platform architecture with hands-on engineering, from
+                modernising legacy systems to building and evaluating AI applications.
               </p>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
                 <Link
