@@ -5,7 +5,10 @@ const path = require('path');
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
   await page.goto('file://' + path.resolve(__dirname, 'deck.html'));
-  await page.waitForTimeout(300);
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    await Promise.all([...document.images].map(image => image.decode()));
+  });
   await page.pdf({
     path: path.resolve(__dirname, 'Faris-Hussain-Client-Pitch-Deck.pdf'),
     width: '1920px',
