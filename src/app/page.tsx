@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "./components/Reveal";
@@ -5,6 +6,9 @@ import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import FaqAccordion from "./components/FaqAccordion";
 
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const WORKED_WITH: { name: string; url?: string }[] = [
   { name: "Enmacc GmbH", url: "https://enmacc.com" },

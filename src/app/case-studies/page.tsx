@@ -5,6 +5,7 @@ import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/case-studies" },
   title: "Case Studies — Faris Hussain",
   description:
     "In-depth case studies on agentic AI for energy trading and Data Vault 2.0 data warehouse modernisation for insurance and finance.",
