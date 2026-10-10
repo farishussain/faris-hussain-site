@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://faris-hussain-site.vercel.app"),
+  metadataBase: new URL("https://faris-hussain.vercel.app"),
   title: "Faris Hussain — Data & AI Platform Engineer",
   description:
     "Faris Hussain is a Data & AI Platform Engineer in Munich, building modern data platforms and agentic AI systems — from Data Vault 2.0 to production AI agents.",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Faris Hussain — Data & AI Platform Engineer",
     description:
       "Data & AI Platform Engineer building modern data platforms and agentic AI systems in production.",
-    url: "https://faris-hussain-site.vercel.app",
+    url: "https://faris-hussain.vercel.app",
     siteName: "Faris Hussain",
     locale: "en_US",
     type: "website",
@@ -41,9 +41,9 @@ const personJsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://faris-hussain-site.vercel.app/#person",
+      "@id": "https://faris-hussain.vercel.app/#person",
       name: "Faris Hussain",
-      url: "https://faris-hussain-site.vercel.app",
+      url: "https://faris-hussain.vercel.app",
       jobTitle: "Data & AI Platform Engineer",
       description:
         "Data & AI Platform Engineer and Data Vault Architect helping companies modernise legacy data architecture and build production-grade agentic AI systems.",
@@ -62,18 +62,18 @@ const personJsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://faris-hussain-site.vercel.app/#website",
-      url: "https://faris-hussain-site.vercel.app",
+      "@id": "https://faris-hussain.vercel.app/#website",
+      url: "https://faris-hussain.vercel.app",
       name: "Faris Hussain — Data & AI Platform Engineer",
-      publisher: { "@id": "https://faris-hussain-site.vercel.app/#person" },
+      publisher: { "@id": "https://faris-hussain.vercel.app/#person" },
       inLanguage: "en",
     },
     {
       "@type": "Service",
-      "@id": "https://faris-hussain-site.vercel.app/#service",
+      "@id": "https://faris-hussain.vercel.app/#service",
       name: "Data Platform & Agentic AI Engineering",
       serviceType: "Data Engineering Consulting",
-      provider: { "@id": "https://faris-hussain-site.vercel.app/#person" },
+      provider: { "@id": "https://faris-hussain.vercel.app/#person" },
       areaServed: { "@type": "Country", name: "Worldwide" },
       description:
         "Data platform modernisation, Data Vault 2.0 architecture, and agentic AI system design and implementation.",

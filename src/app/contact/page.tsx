@@ -6,6 +6,7 @@ import SiteFooter from "../components/SiteFooter";
 import ContactForm from "../components/ContactForm";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact — Faris Hussain",
   description:
     "Get in touch with Faris Hussain for data platform modernisation, Data Vault 2.0 architecture, or agentic AI engineering work.",
