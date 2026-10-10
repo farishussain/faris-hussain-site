@@ -39,14 +39,15 @@ export default function ContactPage() {
               Open to select consulting work
             </div>
             <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
-              Ready to start a project?
+              What would you like to improve?
             </h1>
             <h2 className="mt-2 text-xl font-semibold text-neutral-300">
-              Fill Out This <span className="text-sky-400 italic">Form</span>
+              Start with your <span className="text-sky-400 italic">goal</span>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-neutral-400">
-              I&apos;ll get back to you within a day or two. The more detail you share,
-              the better I can understand how to help.
+              Share your current data setup, the problem you want to solve and the
+              outcome you need from your Data &amp; ML platform or AI workflow. We can
+              discuss scope, fit and availability.
             </p>
           </Reveal>
         </section>
