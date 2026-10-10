@@ -93,11 +93,12 @@ const EXPERIENCE = [
     location: "Munich, Germany (Hybrid)",
     period: "Feb 2025 – Present",
     points: [
-      "Agentic AI R&D for an Agentic Energy Trading Marketplace, designing autonomous, goal-oriented trading agents using Google Agentic SDK (ADK) and Amazon Bedrock.",
-      "Embedded AI pair-programming tools (Cursor, GitHub Copilot, Gemini) into the full SDLC, accelerating delivery and raising engineering quality.",
-      "Led analytics transformation from Power BI / Tableau to ThoughtSpot, enabling AI-powered natural language search analytics.",
-      "Provisioned cloud infrastructure as code with Terraform and AWS CloudFormation; built ETL pipelines on AWS Glue, S3, Lake Formation, and Lambda.",
-      "Implemented Apache Airflow for workflow automation and deep observability into pipeline health.",
+      "Designed Medallion-based data architecture for energy trading analytics and platform modernisation.",
+      "Provisioned infrastructure with Terraform and AWS CloudFormation; built data pipelines and governed data foundations using AWS Glue, S3, Lake Formation and Lambda.",
+      "Implemented Apache Airflow for workflow orchestration and visibility into pipeline health.",
+      "Led the analytics transition from Power BI and Tableau to ThoughtSpot for natural-language search and self-service reporting.",
+      "Contributed to energy-trading agent R&D, designing goal-oriented agents with Google ADK and Amazon Bedrock.",
+      "Integrated Cursor, GitHub Copilot and Gemini into software development workflows.",
     ],
   },
   {
@@ -106,10 +107,10 @@ const EXPERIENCE = [
     location: "Naperville, IL, USA (Remote)",
     period: "Mar 2023 – Nov 2024",
     points: [
-      "Migrated legacy insurance and finance systems to Snowflake using Data Vault 2.0 methodology across multiple source systems.",
-      "Designed ETL pipelines with advanced SQL logic for batch (Talend) and streaming (Kafka) processing.",
-      "Automated data orchestration with Airflow and optimised modelling with VaultSpeed; integrated SAP Hana and SAP BODI.",
-      "Managed CI/CD deployments via Azure DevOps in an agile environment.",
+      "Migrated enterprise insurance and finance data from legacy systems to Snowflake using Data Vault 2.0 models across multiple sources.",
+      "Built SQL transformations and ETL pipelines with Talend for batch processing and Kafka for streaming.",
+      "Automated orchestration with Airflow and warehouse modelling with VaultSpeed; integrated SAP HANA data and replaced SAP BODI ETL logic with Talend.",
+      "Managed warehouse and pipeline deployments through Azure DevOps CI/CD.",
     ],
   },
   {
@@ -118,51 +119,51 @@ const EXPERIENCE = [
     location: "USA (Remote)",
     period: "Jul 2020 – Mar 2023",
     points: [
-      "Designed ETL pipelines for business use cases and ML model training; built data warehouses on Azure Synapse Analytics.",
-      "Core contributor to Astera's Data Warehouse Builder — a low-code, metadata-driven DWH product with automated Data Vault generation.",
-      "Implemented Data Vault 2.0, Kimball Dimensional, and Inmon 3NF modelling architectures.",
-      "Maintained pipelines across Snowflake, Redshift, Oracle, SQL Server, Postgres, and Azure.",
+      "Contributed to Astera's Data Warehouse Builder, a reusable, metadata-driven product with automated Data Vault generation and ETL orchestration.",
+      "Implemented Data Vault 2.0, Kimball dimensional and Inmon 3NF models for warehouse design.",
+      "Built Azure Synapse Analytics warehouses and ETL pipelines supplying business datasets and data for ML model training.",
+      "Maintained data pipelines across Snowflake, Redshift, Oracle, SQL Server, PostgreSQL and Azure.",
     ],
   },
 ];
 
 const PROJECTS = [
   {
-    title: "Agentic AI for an Energy Trading Marketplace",
-    stack: "Google ADK · Amazon Bedrock · AWS Glue/S3/Lambda · Airflow · Terraform",
-    description:
-      "Designed autonomous, goal-oriented trading agents for RFQ negotiation, backed by a real-time data pipeline and infrastructure as code.",
-    impact: "Thesis research found economic equivalence between LLM-driven and rule-based agents, informing production architecture.",
-    caseStudySlug: "agentic-ai-energy-trading",
-  },
-  {
     title: "Data Platform Modernisation — Energy Commodities Trading",
     stack: "AWS · Redshift · Lambda · Glue · Medallion Architecture · Airflow · Python",
     description:
-      "Designed a modern, agile, scalable data architecture aligned with business growth strategy, implementing Medallion Architecture for 360° analytical capability.",
-    impact: "Startup-to-scaleup model built for cost efficiency without re-architecting later.",
+      "Designed Medallion-based architecture for energy trading analytics, with cloud data pipelines and Airflow orchestration.",
+    impact: "Medallion-based platform design, cloud ingestion pipelines and observable data workflows.",
   },
   {
     title: "Data Warehouse Modernisation — Insurance & Finance",
     stack: "Snowflake · Kafka · Data Vault 2.0 · VaultSpeed · Talend · SAP · DB2 · Airflow",
     description:
-      "Migrated legacy insurance policy data from Mainframe/DB2 to Snowflake and designed Data Vault 2.0 architecture for SAP finance systems, decommissioning SAP BODI.",
-    impact: "Retired a legacy mainframe/SAP BODI dependency across multiple enterprise source systems.",
+      "Migrated Mainframe/DB2 insurance data to Snowflake and modelled SAP finance data with Data Vault 2.0, supported by batch and streaming pipelines.",
+    impact: "Integrated legacy source data into enterprise warehouses and replaced SAP BODI ETL logic with Talend.",
     caseStudySlug: "data-vault-insurance-finance",
   },
   {
     title: "Data Warehouse Builder — Product Development",
     stack: "Data Vault · Metadata-Driven Design · ETL Automation",
     description:
-      "Core contributor to Astera's flagship low-code, metadata-driven DWH creation product with automated Data Vault generation and ETL orchestration.",
-    impact: "Shipped a reusable product feature, not a one-off client build — used across Astera's customer base.",
+      "Contributed to Astera's low-code warehouse product, translating modelling patterns into metadata-driven Data Vault generation and ETL orchestration.",
+    impact: "Reusable warehouse automation within a software product rather than a single client implementation.",
   },
   {
     title: "REST API Browser — Feature Development",
     stack: "REST APIs · HTTP Methods · API Integration",
     description:
-      "Built a feature for Astera Centerprise enabling drag-and-drop discovery and integration of third-party REST APIs directly from the platform.",
-    impact: "Reduced manual configuration effort for users integrating third-party APIs.",
+      "Built drag-and-drop REST API discovery and integration within Astera Centerprise for connecting third-party data sources.",
+    impact: "API discovery and configuration available directly within the integration platform.",
+  },
+  {
+    title: "Multi-Agent Energy Trading — Research & Evaluation",
+    stack: "LLM-driven agents · Rule-based baselines · RFQ simulations · Experiment analytics",
+    description:
+      "Compared LLM-driven and rule-based agents in simulated energy-market negotiations, contributing energy-specific agents, data transformations and experiment analytics.",
+    impact: "A simulation-based evaluation of negotiation outcomes and agent behaviour, not evidence of live trading performance or commercial returns.",
+    caseStudySlug: "agentic-ai-energy-trading",
   },
 ];
 
