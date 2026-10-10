@@ -23,22 +23,22 @@ const FAQS = [
   {
     question: "What kind of projects do you take on?",
     answer:
-      "Data platform modernisation (legacy to cloud), Data Vault 2.0 warehouse design, ETL/ELT pipeline builds, and agentic AI / LLM system design — from architecture through production implementation.",
+      "Data platform modernisation, warehouse modelling, platform governance, reliable pipelines and self-service analytics. I also integrate domain-specific AI agents into workflows and evaluate their behaviour against clear baselines.",
   },
   {
     question: "Do you work hands-on, or just advise?",
     answer:
-      "Hands-on. I design the architecture and build it — pipelines, data models, infrastructure as code, and working AI agents — not just recommendations on paper.",
+      "Both. I combine architecture and advice with hands-on implementation of data models, pipelines, infrastructure as code and AI integrations. The scope can include testing, deployment automation and evaluation.",
   },
   {
     question: "Are you available for consulting or contract work?",
     answer:
-      "I'm currently a Platform Data Engineer at Enmacc GmbH. I'm open to selective advisory, consulting, or collaboration on interesting data and AI projects — reach out and we can discuss scope and availability.",
+      "I'm a Platform Data Engineer at Enmacc GmbH. I'm open to selective consulting, advisory and collaboration work alongside that role. Share your project scope so we can discuss fit and availability.",
   },
   {
     question: "What industries have you worked in?",
     answer:
-      "Energy trading, insurance, and finance — modernising data warehouses for regulated, high-stakes environments, plus R&D on agentic AI for trading systems.",
+      "Energy trading, insurance and finance, plus data-platform product development. My work spans warehouse migration, cloud pipelines and analytics, with agent-development R&D and separate simulation-based research.",
   },
   {
     question: "Where are you based?",
@@ -504,10 +504,11 @@ export default function Home() {
         {/* Contact */}
         <section id="contact" className="mx-auto max-w-5xl px-6 py-20 text-center">
           <Reveal>
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Let&apos;s work together</h2>
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Let&apos;s discuss your data challenge</h2>
             <p className="mx-auto mt-4 max-w-xl text-neutral-400">
-              Open to consulting engagements, contract work, and collaboration on data
-              platform and agentic AI projects.
+              Tell me what you want to improve in your data platform, pipelines or AI
+              workflows. I&apos;m open to selective consulting and advisory work
+              alongside my role at Enmacc.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a
