@@ -14,20 +14,20 @@ export const metadata: Metadata = {
 const CASE_STUDIES = [
   {
     slug: "agentic-ai-energy-trading",
-    title: "Agentic AI for an Energy Trading Marketplace",
+    title: "Energy Trading Agents — Development & Research",
     company: "Enmacc GmbH",
     period: "Feb 2025 – Present",
     stack: "Google ADK · Amazon Bedrock · AWS Glue/S3/Lambda · Airflow · Terraform",
     challenge:
-      "Enmacc's energy trading marketplace needed to explore whether autonomous, LLM-driven agents could handle request-for-quote (RFQ) negotiation reliably enough to sit alongside deterministic trading logic — without a clear precedent for how these agents would behave under real market conditions.",
+      "Energy-trading agents need domain-specific workflows and a way to assess negotiation behaviour. The work includes agent-development R&D at Enmacc and a separate academic comparison of LLM-driven and rule-based agents in simulated request-for-quote (RFQ) negotiations.",
     approach: [
-      "Designed autonomous, goal-oriented trading agents using Google's Agentic SDK (ADK) and Amazon Bedrock, applying M.Sc.-level agentic AI research directly in a production setting.",
-      "Built the supporting data foundation — AWS Glue, S3, Lake Formation, and Lambda — to feed the agents real-time trading datasets, with Terraform and CloudFormation for reproducible infrastructure.",
-      "Used Apache Airflow for orchestration and observability, so pipeline health and agent behaviour could be monitored end-to-end.",
-      "Ran the architecture question in parallel through academic research: an M.Eng. thesis benchmarking Gemini 2.5 Flash agents against deterministic rule-based agents in wholesale energy RFQ simulations.",
+      "At Enmacc, designed goal-oriented energy-trading agents using Google ADK and Amazon Bedrock as part of agent-development R&D.",
+      "Platform contributions included AWS Glue, S3, Lake Formation and Lambda data foundations, with Terraform and CloudFormation for infrastructure as code.",
+      "Implemented Apache Airflow for workflow orchestration and visibility into pipeline health.",
+      "Separately, the M.Eng. research compared LLM-driven and rule-based agents in energy RFQ simulations, with energy-specific agents, data transformations, negotiation workflows and experiment analytics.",
     ],
     outcome:
-      "The research found economic equivalence between LLM-driven and rule-based agents, with distinct tradeoffs in decision quality — directly informing how agentic components are being designed into the trading marketplace's architecture.",
+      "The contributions cover agent-development R&D and platform engineering at Enmacc, alongside a separate simulation-based research evaluation. The academic work examines negotiation outcomes, economic measures and model telemetry; it does not establish live autonomous trading performance, commercial returns or adoption of the findings in production.",
   },
   {
     slug: "data-vault-insurance-finance",
@@ -36,15 +36,15 @@ const CASE_STUDIES = [
     period: "Mar 2023 – Nov 2024",
     stack: "Snowflake · Data Vault 2.0 · VaultSpeed · Talend · Kafka · Airflow · SAP",
     challenge:
-      "A portfolio of legacy insurance and finance systems — running on Mainframe/DB2 and SAP, with data spread across multiple source systems — needed to move onto a modern, auditable enterprise data warehouse without disrupting live policy and finance operations.",
+      "Insurance and finance data held in Mainframe/DB2 and SAP systems needed to be integrated into modern enterprise warehouses with consistent modelling across multiple sources.",
     approach: [
-      "Migrated legacy insurance policy data from Mainframe/DB2 to Snowflake using the Data Vault 2.0 methodology, supporting multiple source systems in a single enterprise DWH.",
-      "Built ETL pipelines combining Talend for batch processing and Kafka for streaming, with advanced SQL logic to improve data accuracy across business units.",
-      "Automated orchestration with Airflow and optimised data modelling using VaultSpeed; integrated SAP Hana and SAP BODI platforms into the new warehouse.",
-      "Decommissioned SAP BODI entirely by translating its ETL logic into Talend, and managed the rollout through CI/CD in Azure DevOps with client requests tracked via ServiceNow.",
+      "Migrated Mainframe/DB2 insurance data to Snowflake and designed Data Vault 2.0 models for SAP finance data.",
+      "Built SQL transformations and pipelines using Talend for batch processing and Kafka for streaming.",
+      "Automated orchestration with Airflow and warehouse modelling with VaultSpeed, integrating multiple source systems.",
+      "Replaced SAP BODI ETL logic with Talend and managed warehouse and pipeline deployments through Azure DevOps CI/CD.",
     ],
     outcome:
-      "Consolidated multiple insurance and finance source systems onto a single Snowflake + Data Vault 2.0 warehouse and retired a legacy SAP BODI dependency — giving the business an auditable, scalable foundation for policy and finance data going forward.",
+      "Integrated legacy insurance and finance data into enterprise warehouse models and replaced SAP BODI ETL logic with Talend. The delivered work covered source migration, modelling, pipeline orchestration and deployment automation.",
   },
 ];
 
