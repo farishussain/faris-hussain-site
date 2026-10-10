@@ -4,6 +4,7 @@ import { join } from "node:path";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const alt = "Faris Hussain | Data & ML Platforms for AI Systems";
 
 const HERO_STATS = [
   { top: "Data Vault 2.0", bottom: "Specialist", style: { top: 30, left: -10 } },
@@ -58,8 +59,8 @@ export default async function Image() {
             Hi, this is Faris Hussain
           </div>
           <div style={{ display: "flex", fontSize: 22, color: "#d4d4d4", marginTop: 22, lineHeight: 1.5 }}>
-            Data platforms and agentic AI systems — Data Vault 2.0 to
-            autonomous trading agents in production.
+            Modern Data &amp; ML platforms for AI systems. Reliable pipelines,
+            platform modernisation and practical AI integration.
           </div>
           <div style={{ display: "flex", gap: 16, marginTop: 36 }}>
             <div

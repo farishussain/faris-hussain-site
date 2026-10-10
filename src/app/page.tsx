@@ -236,7 +236,7 @@ export default function Home() {
               <h1 className="mt-4 text-balance text-4xl leading-[1.1] font-bold tracking-tight sm:text-5xl xl:text-6xl">
                 Modern{" "}
                 <span className="bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
-                  data &amp; ML platforms
+                  Data &amp; ML platforms
                 </span>{" "}
                 for AI systems
               </h1>
