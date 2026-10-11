@@ -34,14 +34,12 @@
   animation-play-state: paused;
 }
 
-/* Reveal the full original list when paused or navigating its links. */
-.worked-with[data-paused="true"] .worked-with-track,
+/* Reveal the full original list when navigating its links. */
 .worked-with-viewport:focus-within .worked-with-track {
   width: 100%;
   animation: none;
 }
 
-.worked-with[data-paused="true"] .worked-with-group,
 .worked-with-viewport:focus-within .worked-with-group {
   flex: 1;
   flex-wrap: wrap;
@@ -50,7 +48,6 @@
   padding-inline: 0.5rem;
 }
 
-.worked-with[data-paused="true"] .worked-with-copy,
 .worked-with-viewport:focus-within .worked-with-copy {
   display: none;
 }
@@ -75,8 +72,7 @@
     padding-inline: 0.5rem;
   }
 
-  .worked-with-copy,
-  .worked-with-control {
+  .worked-with-copy {
     display: none;
   }
 }
