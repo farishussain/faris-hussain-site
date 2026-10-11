@@ -5,6 +5,7 @@ import Reveal from "./components/Reveal";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import FaqAccordion from "./components/FaqAccordion";
+import WorkedWith from "./components/WorkedWith";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -303,30 +304,7 @@ export default function Home() {
 
         {/* Worked With */}
         <Reveal>
-          <section className="mx-auto max-w-5xl px-6 pb-16">
-            <p className="text-center text-xs font-medium uppercase tracking-widest text-neutral-500">
-              Worked with
-            </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-neutral-400">
-              {WORKED_WITH.map((company) =>
-                company.url ? (
-                  <a
-                    key={company.name}
-                    href={company.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-base font-semibold tracking-tight transition hover:text-white"
-                  >
-                    {company.name}
-                  </a>
-                ) : (
-                  <span key={company.name} className="text-base font-semibold tracking-tight">
-                    {company.name}
-                  </span>
-                )
-              )}
-            </div>
-          </section>
+          <WorkedWith companies={WORKED_WITH} />
         </Reveal>
 
         {/* Services */}

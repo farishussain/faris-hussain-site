@@ -1,0 +1,82 @@
+.worked-with-viewport {
+  margin-top: 1rem;
+  overflow: hidden;
+  padding-block: 0.75rem;
+}
+
+.worked-with-track {
+  display: flex;
+  width: max-content;
+  animation: company-scroll 35s linear infinite;
+}
+
+.worked-with-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 0;
+  padding-inline: 1.25rem;
+  list-style: none;
+}
+
+.worked-with-company {
+  flex: 0 0 auto;
+  color: #a3a3a3;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+}
+
+.worked-with:hover .worked-with-track,
+.worked-with:focus-within .worked-with-track {
+  animation-play-state: paused;
+}
+
+/* Reveal the full original list when paused or navigating its links. */
+.worked-with[data-paused="true"] .worked-with-track,
+.worked-with-viewport:focus-within .worked-with-track {
+  width: 100%;
+  animation: none;
+}
+
+.worked-with[data-paused="true"] .worked-with-group,
+.worked-with-viewport:focus-within .worked-with-group {
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 1rem;
+  padding-inline: 0.5rem;
+}
+
+.worked-with[data-paused="true"] .worked-with-copy,
+.worked-with-viewport:focus-within .worked-with-copy {
+  display: none;
+}
+
+@keyframes company-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .worked-with-track {
+    width: 100%;
+    animation: none;
+  }
+
+  .worked-with-group {
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+    padding-inline: 0.5rem;
+  }
+
+  .worked-with-copy,
+  .worked-with-control {
+    display: none;
+  }
+}
