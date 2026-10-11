@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 800" fill="none">
+  <defs>
+    <linearGradient id="ribbon" x1="470" y1="760" x2="1100" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#075985" stop-opacity=".08"/>
+      <stop offset=".5" stop-color="#24587c" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#704d91" stop-opacity=".35"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="100" y1="800" x2="1090" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset=".45" stop-color="#38bdf8" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity=".3"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#5b3b80" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#5b3b80" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="1070" cy="230" rx="420" ry="380" fill="url(#glow)"/>
+  <path d="M1220-80C875 5 1160 289 997 474S542 665 360 840H655C825 703 1082 663 1170 483S1295 112 1220-80Z" fill="url(#ribbon)"/>
+  <path d="M1220-80C875 5 1160 289 997 474S542 665 360 840" stroke="url(#edge)" stroke-width="1.5"/>
+  <path d="M1280 12C943 62 1207 322 1052 515S611 708 475 858" stroke="url(#edge)"/>
+  <path d="M-70 760C166 614 257 733 485 716S843 615 947 716" stroke="url(#edge)" stroke-width="1.5"/>
+</svg>

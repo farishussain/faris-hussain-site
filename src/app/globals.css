@@ -70,6 +70,27 @@ body {
   animation-delay: 4s;
 }
 
+.homepage-hero-art {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: url("/decor/hero-contours.svg") center / 100% 100% no-repeat;
+  mask-image: linear-gradient(#000 75%, transparent);
+  opacity: 0.75;
+}
+
+.homepage-section-wave {
+  position: absolute;
+  inset: 0 1.5rem auto;
+  height: 3rem;
+  pointer-events: none;
+  background: url("/decor/section-wave.svg") center / 100% 100% no-repeat;
+}
+
+.homepage-section-wave-flipped {
+  transform: scaleX(-1);
+}
+
 .reveal:focus-within {
   opacity: 1 !important;
   transform: none !important;
