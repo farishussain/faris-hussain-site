@@ -1,0 +1,6 @@
+hero-contours.svg and section-wave.svg are original decorative artwork authored
+locally for faris-hussain-site. They contain no third-party assets and were not
+generated or exported by Haikei.
+
+The SVGs use static paths and gradients only, with no scripts, external resources,
+embedded images, fonts, or animation.

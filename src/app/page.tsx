@@ -212,6 +212,7 @@ export default function Home() {
       <main id="top">
         {/* Hero */}
         <section className="relative mx-auto max-w-6xl overflow-hidden px-6 pt-20 pb-24">
+          <div aria-hidden="true" className="homepage-hero-art" />
           <div
             aria-hidden
             className="animate-blob absolute -top-24 -left-24 h-72 w-72 rounded-full bg-sky-500/20 blur-3xl"
@@ -330,7 +331,8 @@ export default function Home() {
         </section>
 
         {/* Experience */}
-        <section id="experience" className="mx-auto max-w-5xl px-6 py-16">
+        <section id="experience" className="relative mx-auto max-w-5xl px-6 py-16">
+          <div aria-hidden="true" className="homepage-section-wave" />
           <Reveal>
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Experience</h2>
           </Reveal>
@@ -480,7 +482,8 @@ export default function Home() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="mx-auto max-w-5xl px-6 py-20 text-center">
+        <section id="contact" className="relative mx-auto max-w-5xl px-6 py-20 text-center">
+          <div aria-hidden="true" className="homepage-section-wave homepage-section-wave-flipped" />
           <Reveal>
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Let&apos;s discuss your data challenge</h2>
             <p className="mx-auto mt-4 max-w-xl text-neutral-400">
