@@ -227,27 +227,27 @@ export default function Home() {
 
           <div className="relative grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
             {/* Left: copy */}
-            <div className="animate-[fade-in-up_0.8s_ease-out] text-center lg:text-left">
+            <div className="text-center lg:text-left">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-sky-400">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 Data &amp; AI Platform Engineer
               </span>
-              <p className="mt-6 text-base font-medium italic text-sky-300 sm:text-lg">
+              <Reveal as="p" className="mt-6 text-base font-medium italic text-sky-300 sm:text-lg">
                 Hi, this is Faris Hussain
-              </p>
-              <h1 className="mt-4 text-balance text-4xl leading-[1.1] font-bold tracking-tight sm:text-5xl xl:text-6xl">
+              </Reveal>
+              <Reveal as="h1" delay={60} className="mt-4 text-balance text-4xl leading-[1.1] font-bold tracking-tight sm:text-5xl xl:text-6xl">
                 Modern{" "}
                 <span className="bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
                   Data &amp; ML platforms
                 </span>{" "}
                 for AI systems
-              </h1>
-              <p className="mt-6 text-balance text-lg leading-relaxed text-neutral-300 lg:max-w-xl">
+              </Reveal>
+              <Reveal as="p" delay={120} className="mt-6 text-balance text-lg leading-relaxed text-neutral-300 lg:max-w-xl">
                 I help businesses bring their data together, build reliable pipelines,
                 and put AI to work in real business workflows. Based in Munich, I
                 combine platform architecture with hands-on engineering, from
                 modernising legacy systems to building and evaluating AI applications.
-              </p>
+              </Reveal>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
                 <Link
                   href="/contact"
@@ -276,7 +276,7 @@ export default function Home() {
             </div>
 
             {/* Right: photo card with floating badges */}
-            <div className="animate-[fade-in-up_1s_ease-out_0.2s_both] relative mx-auto aspect-square w-full max-w-md">
+            <div className="hero-entrance animate-[fade-in-up_1s_ease-out_0.2s_both] relative mx-auto aspect-square w-full max-w-md">
               <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-sky-500/30 via-purple-500/20 to-transparent blur-2xl" />
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl shadow-black/40">
                 <Image
@@ -292,7 +292,7 @@ export default function Home() {
                 <div
                   key={stat.top}
                   style={{ animationDelay: `${0.6 + index * 0.15}s` }}
-                  className={`animate-[fade-in-up_0.6s_ease-out_both] absolute ${stat.position} rounded-2xl border border-white/10 bg-neutral-900/90 px-4 py-3 text-center shadow-xl shadow-black/30 backdrop-blur`}
+                  className={`hero-entrance animate-[fade-in-up_0.6s_ease-out_both] absolute ${stat.position} rounded-2xl border border-white/10 bg-neutral-900/90 px-4 py-3 text-center shadow-xl shadow-black/30 backdrop-blur`}
                 >
                   <p className="text-sm font-bold text-sky-400">{stat.top}</p>
                   <p className="text-xs text-neutral-300">{stat.bottom}</p>
